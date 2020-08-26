@@ -13,7 +13,7 @@ It's a very customized workflow to monitor a remote server. It's launched with `
 - Disk usage.
 - CPU load.
 
-![Endor screen-recording](endor.gif)
+![Endor screen-recording](endor/img/endor.gif)
 
 > I know it's quite difficult to adapt it to common cases since it's based on a concrete API.
 
