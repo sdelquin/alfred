@@ -16,9 +16,15 @@ class Workflow:
             fields['icon'] = {'path': str(self.icons_path / path)}
         return fields
 
+    def _fix_arg(self, fields):
+        if 'arg' not in fields:
+            fields['arg'] = str(fields.get('title'))
+        return fields
+
     def newline(self, title, **kwargs):
         fields = {**{'title': title}, **kwargs}
         fields = self._fix_icon(fields)
+        fields = self._fix_arg(fields)
         self.items['items'].append(fields)
 
     def to_json(self):
