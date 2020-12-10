@@ -12,8 +12,8 @@ IP_SERVICE = prettyconf.config('IP_SERVICE')
 wf = Workflow(icons_path=Path(__file__).absolute().parent / 'img')
 
 # Local IP
-local_ip = socket.gethostbyname(socket.gethostname())
-wf.newline(title=local_ip, subtitle='Local IP', icon='lan.png')
+_, _, local_ips = socket.gethostbyname_ex(socket.gethostname())
+wf.newline(title=', '.join(local_ips), subtitle='Local IP', icon='lan.png')
 
 # Public IP
 public_ip = requests.get(IP_SERVICE).text
