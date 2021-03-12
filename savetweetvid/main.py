@@ -10,10 +10,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 SERVICE_URL = 'https://www.savetweetvid.com'
 tweet_url = sys.argv[1]
 
-options = Options()
-options.headless = True
-
 try:
+    if not tweet_url.startswith('https://twitter.com/'):
+        raise Exception('Input url does not come from Twitter')
+
+    options = Options()
+    options.headless = True
+
     driver = webdriver.Firefox(options=options)
     driver.get(SERVICE_URL)
 
@@ -27,7 +30,7 @@ try:
     )
 
     element = driver.find_elements_by_css_selector('a.btn-download')[0]
-except Exception:
-    print('Something dit not work! 😕')
+except Exception as err:
+    print('Something did not work!', err)
 else:
     print(element.get_attribute('href'))
