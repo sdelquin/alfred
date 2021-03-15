@@ -1,5 +1,6 @@
 import sys
 
+from prettyconf import config
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -15,7 +16,7 @@ try:
         raise Exception('Input url does not come from Twitter')
 
     options = Options()
-    options.headless = True
+    options.headless = config('HEADLESS_WEBDRIVER', default=True, cast=config.boolean)
 
     driver = webdriver.Firefox(options=options)
     driver.get(SERVICE_URL)
