@@ -31,7 +31,17 @@ try:
     )
 
     element = driver.find_elements_by_css_selector('a.btn-download')[0]
+
 except Exception as err:
-    print('Something did not work!', err)
+    error = err
+    try:
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, '.alert'))
+        )
+    except Exception as err:
+        error = err
+    else:
+        error = element.text
+    print('Something did not work!', error)
 else:
     print(element.get_attribute('href'))
