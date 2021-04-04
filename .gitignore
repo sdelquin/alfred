@@ -2,5 +2,5 @@
 .DS_Store
 .vscode
 .env
-resources
+.media
 *.log
