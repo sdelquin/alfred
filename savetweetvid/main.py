@@ -1,5 +1,4 @@
-import sys
-
+import pyperclip
 from prettyconf import config
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -9,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 SERVICE_URL = 'https://www.savetweetvid.com'
-tweet_url = sys.argv[1]
+tweet_url = pyperclip.paste()
 
 try:
     if not tweet_url.startswith('https://twitter.com/'):
