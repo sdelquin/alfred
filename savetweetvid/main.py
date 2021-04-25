@@ -44,3 +44,5 @@ except Exception as err:
     print('Something did not work!', error)
 else:
     print(element.get_attribute('href'))
+finally:
+    driver.close()
