@@ -43,6 +43,6 @@ except Exception as err:
         error = element.text
     print('Something did not work!', error)
 else:
-    print(element.get_attribute('href'))
+    print(element.get_attribute('href'), end='')
 finally:
     driver.close()

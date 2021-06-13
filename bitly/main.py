@@ -25,4 +25,4 @@ payload = {'long_url': long_url, 'domain': "bit.ly", 'group_guid': GROUP_GUID}
 response = requests.post(API_ENTRYPOINT, headers=headers, data=json.dumps(payload))
 rfields = response.json()
 
-print(rfields['link'])
+print(rfields['link'], end='')
