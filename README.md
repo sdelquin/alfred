@@ -70,3 +70,17 @@ Remove background of selected images (in Finder) through the [PhotoRoom API](htt
 ![photoroom screen-recording](photoroom/img/photoroom.gif)
 
 [Take a look of this workflow!](photoroom)
+
+## cleanurl
+
+Remove tracking and extra query params from URLs.
+
+For example:
+
+https://es.aliexpress.com/item/1005001835574685.html?spm=a2g0o.productlist.0.0.588a497b7V3uQR&algo_pvid=8f2e3d27-536c-49e7-9e4e-cb190b6fc3a1&algo_exp_id=8f2e3d27-536c-49e7-9e4e-cb190b6fc3a1-0
+
+👇🏻
+
+https://es.aliexpress.com/item/1005001835574685.html
+
+> IMPORTANT: This is not "smart" at all. Use it carefully since it only remove the rest of the URL after the ? sign.
