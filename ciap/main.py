@@ -21,7 +21,7 @@ def display(prices: dict):
     wf.send()
 
 
-def get_prices(amazon_price: float):
+def calculate_prices(amazon_price: float):
     norm_igic = IGIC / 100
 
     price_without_iva = amazon_price * IVA_FACTOR
@@ -35,10 +35,10 @@ def get_prices(amazon_price: float):
     final_price = price_without_iva + full_duty
 
     return {
-        'Amazon price': amazon_price,
+        'Final price': final_price,
         'Price without IVA': price_without_iva,
         'Duty': full_duty,
-        'Final price': final_price,
+        'Amazon price': amazon_price,
     }
 
 
@@ -59,5 +59,5 @@ def get_input_price():
 
 if __name__ == '__main__':
     if input_price := get_input_price():
-        prices = get_prices(input_price)
+        prices = calculate_prices(input_price)
         display(prices)
