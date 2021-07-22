@@ -6,6 +6,8 @@ import findersel
 from prettyconf import config
 from pylovepdf.ilovepdf import ILovePdf
 
+from ilovepdf.services import HiddenPrints
+
 ILOVEPDF_PUBLIC_KEY = config('ILOVEPDF_PUBLIC_KEY')
 TRASH_PATH = Path(__file__).home() / '.Trash'
 
@@ -70,8 +72,14 @@ for tool in SINGLE_FILE_TOOLS:
     globals()[tool] = partial(single_file_tool, tool)
 
 
-# First param should be the name of a tool (functions below)
-tool = sys.argv[1]
-# Rest might be optional params for tools
-args = sys.argv[2:]
-globals().get(sys.argv[1])(*args)
+try:
+    # First param should be the name of a tool (functions below)
+    tool = sys.argv[1]
+    # Rest might be optional params for tools
+    args = sys.argv[2:]
+    with HiddenPrints():
+        globals().get(sys.argv[1])(*args)
+except Exception:
+    print('❌ Something did not work!')
+else:
+    print(f'✅ {tool.title()} done!')
