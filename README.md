@@ -84,3 +84,11 @@ https://es.aliexpress.com/item/1005001835574685.html?spm=a2g0o.productlist.0.0.5
 https://es.aliexpress.com/item/1005001835574685.html
 
 > IMPORTANT: This is not "smart" at all. Use it carefully since it only remove the rest of the URL after the ? sign.
+
+## ilovepdf
+
+Operations on PDF files using [iLovePDF API](https://developer.ilovepdf.com/docs/api-reference) through the package [pylovepdf](https://github.com/AndyCyberSec/pylovepdf).
+
+![ilovepdf screen-recording](ilovepdf/img/ilovepdf.gif)
+
+[Take a look of this workflow!](ilovepdf)
