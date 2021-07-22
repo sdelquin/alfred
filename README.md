@@ -92,3 +92,5 @@ Operations on PDF files using [iLovePDF API](https://developer.ilovepdf.com/docs
 ![ilovepdf screen-recording](ilovepdf/img/ilovepdf.gif)
 
 [Take a look of this workflow!](ilovepdf)
+
+💡&nbsp;**Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 during gif conversion.
