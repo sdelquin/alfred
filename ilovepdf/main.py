@@ -13,11 +13,11 @@ TRASH_PATH = Path(__file__).home() / '.Trash'
 
 SINGLE_FILE_TOOLS = [
     'compress',
-    'imagetopdf',  # Not working: https://github.com/AndyCyberSec/pylovepdf/issues/15
-    'officepdf',  # Not working: https://github.com/AndyCyberSec/pylovepdf/issues/16
+    'imagepdf',  # Not working: https://github.com/AndyCyberSec/pylovepdf/issues/17
+    'officepdf',  # Not working: https://github.com/AndyCyberSec/pylovepdf/issues/17
     'pagenumber',
-    'pdfa',
-    'pdftojpg',
+    'pdfa',  # Not working: https://github.com/AndyCyberSec/pylovepdf/issues/17
+    'pdfjpg',  # Not working: https://github.com/AndyCyberSec/pylovepdf/issues/17
     'unlock',
 ]
 
