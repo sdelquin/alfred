@@ -6,7 +6,7 @@ import findersel
 from prettyconf import config
 from pylovepdf.ilovepdf import ILovePdf
 
-from ilovepdf.services import HiddenPrints
+from ilovepdf.services import HiddenPrints, fix_rotation_degrees
 
 ILOVEPDF_PUBLIC_KEY = config('ILOVEPDF_PUBLIC_KEY')
 TRASH_PATH = Path(__file__).home() / '.Trash'
@@ -68,6 +68,23 @@ def split(*args):
     task.delete_current_task()
 
 
+def rotate(*args):
+    for file_path in findersel.get_selected_files():
+        file = Path(file_path)
+
+        task = ilovepdf.new_task(tool)
+        task.add_file(file)
+        task.file.rotate = fix_rotation_degrees(int(args[0]))
+        task.set_output_folder(file.absolute().parent)
+        task.execute()
+        output_filename = task.download()
+        task.delete_current_task()
+
+        output_file = Path(file.with_name(output_filename))
+        file.replace(TRASH_PATH / file.name)
+        output_file.replace(output_file.with_stem(file.stem))
+
+
 for tool in SINGLE_FILE_TOOLS:
     globals()[tool] = partial(single_file_tool, tool)
 
@@ -79,7 +96,7 @@ try:
     args = sys.argv[2:]
     with HiddenPrints():
         globals().get(sys.argv[1])(*args)
-except Exception:
-    print('❌ Something did not work!')
+except Exception as err:
+    print(f'❌ Something did not work!\n{err}')
 else:
     print(f'✅ {tool.title()} done!')
