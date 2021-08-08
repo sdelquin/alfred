@@ -93,4 +93,12 @@ Operations on PDF files using [iLovePDF API](https://developer.ilovepdf.com/docs
 
 [Take a look of this workflow!](ilovepdf)
 
-💡&nbsp;**Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 during gif conversion.
+## vcompress
+
+Compress video files using [ffmpeg](https://www.ffmpeg.org/).
+
+![vcompress screen-recording](vcompress/img/vcompress.gif)
+
+[Take a look of this workflow!](vcompress)
+
+💡&nbsp;**Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 using gif conversion.
