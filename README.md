@@ -41,7 +41,7 @@ Shorten url from clipboard using bitly.com API. Resulting url is also copied to 
 
 ## translate
 
-Translations between Spanish & English through library [py-googletrans](https://github.com/ssut/py-googletrans).
+Translations between Spanish & English through library [wrpy](https://github.com/sdelquin/wrpy).
 
 ![Translate screen-recording](translate/img/translate.gif)
 

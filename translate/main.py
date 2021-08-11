@@ -1,22 +1,29 @@
 import sys
-
-from googletrans import Translator
+from pathlib import Path
 
 from workflow import Workflow
+from wrpy import WordReference
 
-wf = Workflow()
+wf = Workflow(icons_path=Path(__file__).absolute().parent / 'img')
 
-src_lang, dest_lang = sys.argv[1].strip().split('-')
+dict_code = sys.argv[1].strip()
 text = sys.argv[2].strip().lower()
 
-translator = Translator()
-translation = translator.translate(text, src=src_lang, dest=dest_lang)
+wr = WordReference(dict_code)
+response = wr.translate(text)
 
-try:
-    for candidate in translation.__dict__()['parts'][0]['candidates']:
-        title = candidate.lower()
-        if title != text:
-            wf.newline(title=title)
-except TypeError:
-    wf.newline(title=translation.text)
+for section in response['translations']:
+    wf.newline(section['title'], icon='header.png')
+    for entry in section['entries']:
+        source = entry['from_word']['source']
+        meanings = ' • '.join(m['meaning'] for m in entry['to_word'])
+        title = f'{source} → {meanings}'
+        context = entry.get('context', '')
+        if example := entry['to_example'][0] if entry['to_example'] else '':
+            subtitle = f'{context} | {example}'
+        else:
+            subtitle = context
+        arg = entry['to_word'][0]['meaning']
+        wf.newline(title=title, subtitle=subtitle, arg=arg)
+
 wf.send()
