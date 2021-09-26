@@ -8,6 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 SERVICE_URL = 'https://www.savetweetvid.com'
+HEADLESS_WEBDRIVER = config('HEADLESS_WEBDRIVER', default=True, cast=config.boolean)
+GECKODRIVER_PATH = config('GECKODRIVER_PATH', default='/usr/local/bin/geckodriver')
+
 tweet_url = pyperclip.paste()
 
 try:
@@ -15,9 +18,9 @@ try:
         raise Exception('Input url does not come from Twitter')
 
     options = Options()
-    options.headless = config('HEADLESS_WEBDRIVER', default=True, cast=config.boolean)
+    options.headless = HEADLESS_WEBDRIVER
 
-    driver = webdriver.Firefox(options=options)
+    driver = webdriver.Firefox(executable_path=GECKODRIVER_PATH, options=options)
     driver.get(SERVICE_URL)
 
     element = driver.find_element_by_xpath('//*[@id="form_download"]/div/input')
