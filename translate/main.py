@@ -1,15 +1,18 @@
 import sys
 from pathlib import Path
 
-from workflow import Workflow
+from prettyconf import config
 from wrpy import WordReference
+
+from workflow import Workflow
+
+DICTIONARY = config('DICTIONARY', default='ENES')
 
 wf = Workflow(icons_path=Path(__file__).absolute().parent / 'img')
 
-dict_code = sys.argv[1].strip()
-text = sys.argv[2].strip().lower()
+text = sys.argv[1].strip().lower()
 
-wr = WordReference(dict_code)
+wr = WordReference(DICTIONARY)
 response = wr.translate(text)
 
 for section in response['translations']:
