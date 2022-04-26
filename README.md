@@ -85,6 +85,10 @@ https://es.aliexpress.com/item/1005001835574685.html
 
 > IMPORTANT: This is not "smart" at all. Use it carefully since it only remove the rest of the URL after the ? sign.
 
+> 💡 &nbsp;URL must be previously copied to clipboard.
+
+[Take a look of this workflow!](cleanurl)
+
 ## ilovepdf
 
 Operations on PDF files using [iLovePDF API](https://developer.ilovepdf.com/docs/api-reference) through the package [pylovepdf](https://github.com/AndyCyberSec/pylovepdf).
@@ -102,3 +106,19 @@ Compress video files using [ffmpeg](https://www.ffmpeg.org/).
 [Take a look of this workflow!](vcompress)
 
 💡&nbsp;**Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 using gif conversion.
+
+## unshorten
+
+Unshorten URL from shortened URL.
+
+For example:
+
+https://t.ull.es/15rn
+
+👇🏻
+
+https://www.ull.es/portal/convocatorias/convocatoria/convocatoria-de-ayudas-de-bonos-de-comedor-alumnado-2022/
+
+> 💡 &nbsp;URL must be previously copied to clipboard.
+
+[Take a look of this workflow!](unshorten)
