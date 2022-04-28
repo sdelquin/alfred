@@ -1,5 +1,8 @@
 # Alfred Workflows
 
+<!--
+**Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 using gif conversion. -->
+
 Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://www.alfredapp.com/).
 
 ![Alfred Logo](alfred-logo.png)
@@ -75,6 +78,8 @@ Remove background of selected images (in Finder) through the [PhotoRoom API](htt
 
 Remove tracking and extra query params from URLs.
 
+![cleanurl screen-recording](cleanurl/img/cleanurl.gif)
+
 For example:
 
 https://es.aliexpress.com/item/1005001835574685.html?spm=a2g0o.productlist.0.0.588a497b7V3uQR&algo_pvid=8f2e3d27-536c-49e7-9e4e-cb190b6fc3a1&algo_exp_id=8f2e3d27-536c-49e7-9e4e-cb190b6fc3a1-0
@@ -83,7 +88,7 @@ https://es.aliexpress.com/item/1005001835574685.html?spm=a2g0o.productlist.0.0.5
 
 https://es.aliexpress.com/item/1005001835574685.html
 
-> IMPORTANT: This is not "smart" at all. Use it carefully since it only remove the rest of the URL after the ? sign.
+**Disclaimer**: This is not "smart" at all. Use it carefully since it only remove the rest of the URL after the ? sign.
 
 > 💡 &nbsp;URL must be previously copied to clipboard.
 
@@ -105,20 +110,20 @@ Compress video files using [ffmpeg](https://www.ffmpeg.org/).
 
 [Take a look of this workflow!](vcompress)
 
-💡&nbsp;**Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 using gif conversion.
-
 ## unshorten
 
 Unshorten URL from shortened URL.
 
-For example:
-
-https://t.ull.es/15rn
-
-👇🏻
-
-https://www.ull.es/portal/convocatorias/convocatoria/convocatoria-de-ayudas-de-bonos-de-comedor-alumnado-2022/
+![unshorten screen-recording](unshorten/img/unshorten.gif)
 
 > 💡 &nbsp;URL must be previously copied to clipboard.
 
 [Take a look of this workflow!](unshorten)
+
+## ivaigic
+
+Convert price with [IVA](https://es.wikipedia.org/wiki/Impuesto_al_valor_agregado) into price with [IGIC](https://es.wikipedia.org/wiki/Impuesto_General_Indirecto_Canario).
+
+![ivaigic screen-recording](ivaigic/img/ivaigic.gif)
+
+[Take a look of this workflow!](ivaigic)
