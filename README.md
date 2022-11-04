@@ -1,4 +1,4 @@
-# Alfred Workflows
+# Alfred Workflows <!-- omit in TOC -->
 
 <!--
 **Autoreminder**: Screen-recordings should have ratio 1.6. It can be recorded at 1600x960 and then rescaled to 600x360 using gif conversion. -->
@@ -6,6 +6,20 @@
 Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://www.alfredapp.com/).
 
 ![Alfred Logo](alfred-logo.png)
+
+## Available workflows <!-- omit in TOC -->
+
+- [endor](#endor)
+- [vip](#vip)
+- [bitly](#bitly)
+- [translate](#translate)
+- [ciap](#ciap)
+- [savetweetvid](#savetweetvid)
+- [photoroom](#photoroom)
+- [cleanurl](#cleanurl)
+- [vcompress](#vcompress)
+- [unshorten](#unshorten)
+- [ivaigic](#ivaigic)
 
 ## endor
 
