@@ -9,32 +9,34 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 
 ## Available workflows <!-- omit in TOC -->
 
-- [endor](#endor)
-- [vip](#vip)
-- [bitly](#bitly)
-- [translate](#translate)
-- [ciap](#ciap)
-- [savetweetvid](#savetweetvid)
-- [photoroom](#photoroom)
-- [cleanurl](#cleanurl)
-- [vcompress](#vcompress)
-- [unshorten](#unshorten)
-- [ivaigic](#ivaigic)
+- [Alfred Workflows ](#alfred-workflows-)
+  - [Available workflows ](#available-workflows-)
+  - [andor](#andor)
+  - [vip](#vip)
+  - [bitly](#bitly)
+  - [translate](#translate)
+  - [ciap](#ciap)
+  - [savetweetvid](#savetweetvid)
+  - [photoroom](#photoroom)
+  - [cleanurl](#cleanurl)
+  - [vcompress](#vcompress)
+  - [unshorten](#unshorten)
+  - [ivaigic](#ivaigic)
 
-## endor
+## andor
 
-It's a very customized workflow to monitor a remote server. It's launched with `endor` keyword and it shows some information about the remote machine:
+It's a very customized workflow to monitor a remote server. It's launched with `andor` keyword and it shows some information about the remote machine:
 
 - CPU frequency.
 - Memory usage.
 - Disk usage.
 - CPU load.
 
-![Endor screen-recording](endor/img/endor.gif)
+![Andor screen-recording](andor/img/andor.gif)
 
 > I know it's quite difficult to adapt it to common cases since it's based on a concrete API.
 
-[Take a look of this workflow!](endor)
+[Take a look of this workflow!](andor)
 
 ## vip
 
