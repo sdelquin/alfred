@@ -21,6 +21,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [unshorten](#unshorten)
 - [ivaigic](#ivaigic)
 - [gogogo](#gogogo)
+- [square](#square)
 
 ## andor
 
@@ -118,3 +119,9 @@ Convert price with [IVA](https://es.wikipedia.org/wiki/Impuesto_al_valor_agregad
 Browse webpages through simple alias.
 
 [Take a look of this workflow!](gogogo)
+
+## square
+
+Square images with background color taken from de (20, 20) pixel of the source image.
+
+[Take a look of this workflow!](square)
