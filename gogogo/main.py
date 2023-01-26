@@ -11,8 +11,9 @@ target = sys.argv[1].strip().lower()
 with open(f) as csvfile:
     routes = DictReader(csvfile)
     for route in routes:
-        alias = route["alias"]
-        if not target or alias.startswith(target):
+        alias = route['alias']
+        fixed_alias = alias.lower().replace(' ', '')
+        if not target or alias.startswith(target) or fixed_alias.startswith(target):
             url = route['url']
             description = route['description']
             icon = f'{alias.split()[0]}.png'
