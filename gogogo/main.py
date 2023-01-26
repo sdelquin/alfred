@@ -14,7 +14,10 @@ with open(f) as csvfile:
         alias = route["alias"]
         if not target or alias.startswith(target):
             url = route['url']
+            description = route['description']
             icon = f'{alias.split()[0]}.png'
-            wf.newline(title=alias, autocomplete=alias, subtitle=url, arg=url, icon=icon)
+            wf.newline(
+                title=alias, autocomplete=alias, subtitle=description, arg=url, icon=icon
+            )
 
 wf.send()
