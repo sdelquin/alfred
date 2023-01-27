@@ -23,7 +23,6 @@ with open(f) as csvfile:
             not target
             or alias.startswith(target)
             or fixed_alias.startswith(fixed_target)
-            or target in alias
             or target in description.lower()
         ):
             url = route['url']
