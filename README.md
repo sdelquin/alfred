@@ -22,6 +22,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [ivaigic](#ivaigic)
 - [gogogo](#gogogo)
 - [square](#square)
+- [img2pdf](#img2pdf)
 
 ## andor
 
@@ -125,3 +126,9 @@ Browse webpages through simple alias.
 Square images with background color taken from de (20, 20) pixel of the source image.
 
 [Take a look of this workflow!](square)
+
+## img2pdf
+
+Convert any image to PDF format.
+
+[Take a look of this workflow!](img2pdf)

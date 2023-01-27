@@ -24,8 +24,12 @@ def expand2square(pil_img: Image, background_color: str) -> Image:
         return result
 
 
+converted_images = 0
 for image_path in findersel.get_selected_files():
     image = Image.open(image_path)
     background_color = get_pixel_color(image, *SOURCE_BACKGROUND_COLOR_POSITION)
     squared_image = expand2square(image, background_color)
     squared_image.save(image_path)
+    converted_images += 1
+
+print(converted_images, end='')
