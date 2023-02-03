@@ -23,6 +23,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [gogogo](#gogogo)
 - [square](#square)
 - [img2pdf](#img2pdf)
+- [pdfmerge](#pdfmerge)
 
 ## andor
 
@@ -132,3 +133,9 @@ Square images with background color taken from de (20, 20) pixel of the source i
 Convert any image to PDF format.
 
 [Take a look of this workflow!](img2pdf)
+
+## pdfmerge
+
+Merge several PDFs into one single file
+
+[Take a look of this workflow!](pdfmerge)
