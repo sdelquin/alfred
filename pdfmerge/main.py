@@ -3,7 +3,7 @@ from pathlib import Path
 import findersel
 from PyPDF2 import PdfMerger
 
-OUTPUT_PDF_NAME = 'output.pdf'
+OUTPUT_PDF_NAME = 'merged.pdf'
 
 merger = PdfMerger()
 
