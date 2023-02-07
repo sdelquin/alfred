@@ -24,6 +24,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [square](#square)
 - [img2pdf](#img2pdf)
 - [pdfmerge](#pdfmerge)
+- [pdfsplit](#pdfsplit)
 
 ## andor
 
@@ -139,3 +140,9 @@ Convert any image to PDF format.
 Merge several PDFs into one single file
 
 [Take a look of this workflow!](pdfmerge)
+
+## pdfsplit
+
+Split PDF file into several parts
+
+[Take a look of this workflow!](pdfsplit)
