@@ -25,6 +25,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [img2pdf](#img2pdf)
 - [pdfmerge](#pdfmerge)
 - [pdfsplit](#pdfsplit)
+- [svg2png](#svg2png)
 
 ## andor
 
@@ -137,12 +138,18 @@ Convert any image to PDF format.
 
 ## pdfmerge
 
-Merge several PDFs into one single file
+Merge several PDFs into one single file.
 
 [Take a look of this workflow!](pdfmerge)
 
 ## pdfsplit
 
-Split PDF file into several parts
+Split PDF file into several parts.
 
 [Take a look of this workflow!](pdfsplit)
+
+## svg2png
+
+Convert SVG files into PNG files.
+
+[Take a look of this workflow!](svg2png)
