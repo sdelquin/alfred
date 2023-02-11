@@ -6,7 +6,7 @@ from pathlib import Path
 
 from workflow import Workflow
 
-BOUNDARY_SYMBOLS = r'[- ()]+'
+BOUNDARY_SYMBOLS = r'[- ():]+'
 
 
 def match(query_parts, name):
