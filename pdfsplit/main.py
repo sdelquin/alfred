@@ -9,7 +9,7 @@ split_size = int(sys.argv[1])
 processed_files = 0
 for pdf_path in findersel.get_selected_files():
     with open(pdf_path, 'rb') as input_file:
-        file_id = 0
+        file_id = 1
         reader = PdfReader(input_file)
         for i in range(0, len(reader.pages), split_size):
             writer = PdfWriter()
