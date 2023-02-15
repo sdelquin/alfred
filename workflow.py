@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 
@@ -32,6 +33,9 @@ class Workflow:
 
     def send(self):
         print(self.to_json())
+
+    def get_var(self, varname: str, *, cast=str, default=''):
+        return cast(os.environ.get(varname, default))
 
     def __str__(self):
         return self.to_json()
