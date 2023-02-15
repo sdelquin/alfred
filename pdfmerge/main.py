@@ -8,7 +8,7 @@ OUTPUT_PDF_NAME = 'merged.pdf'
 merger = PdfMerger()
 
 merged_files = 0
-for pdf_path in sorted(findersel.get_selected_files()):
+for pdf_path in findersel.get_selected_files(sort=True):
     merger.append(pdf_path)
     merged_files += 1
 
