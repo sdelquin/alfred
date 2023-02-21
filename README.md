@@ -20,7 +20,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [vcompress](#vcompress)
 - [unshorten](#unshorten)
 - [ivaigic](#ivaigic)
-- [gogogo](#gogogo)
+- [go!](#go)
 - [square](#square)
 - [img2pdf](#img2pdf)
 - [pdfmerge](#pdfmerge)
@@ -118,11 +118,11 @@ Convert price with [IVA](https://es.wikipedia.org/wiki/Impuesto_al_valor_agregad
 
 [Take a look of this workflow!](ivaigic)
 
-## gogogo
+## go!
 
-Browse webpages through simple alias.
+Go to websites through simple custom aliases.
 
-[Take a look of this workflow!](gogogo)
+[Take a look of this workflow!](go)
 
 ## square
 
