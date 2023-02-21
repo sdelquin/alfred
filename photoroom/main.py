@@ -3,6 +3,7 @@ from pathlib import Path
 import findersel
 import requests
 from prettyconf import config
+from requests.exceptions import HTTPError
 
 PHOTOROOM_API_ENTRYPOINT = config(
     'PHOTOROOM_API_ENTRYPOINT', default='https://sdk.photoroom.com/v1/segment'
@@ -26,7 +27,15 @@ def make_alpha(image_path: str):
 
 num_processed_images = 0
 for image_path in findersel.get_selected_files():
-    make_alpha(image_path)
+    try:
+        make_alpha(image_path)
+    except HTTPError as err:
+        status = err.response.status_code
+        if status == 402:
+            print(f'ERROR {status}: Payment Required. You run out of API credits')
+        else:
+            print(f'ERROR {status}')
+        break
     num_processed_images += 1
-
-print(num_processed_images, end='')
+else:
+    print(num_processed_images, end='')
