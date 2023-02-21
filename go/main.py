@@ -1,10 +1,11 @@
 import re
-import sqlite3
 import sys
 import unicodedata
 from pathlib import Path
 
 from workflow import Workflow
+
+from .utils import create_db_conn
 
 BOUNDARY_SYMBOLS = r'[- ():]+'
 CWD = Path(__file__).parent
@@ -23,11 +24,10 @@ query = unicodedata.normalize('NFC', sys.argv[1]).strip().lower()
 query_parts = re.split(BOUNDARY_SYMBOLS, query)
 
 wf = Workflow(icons_path=CWD / 'img')
-db_path = CWD / 'go.sqlite'
 
-con = sqlite3.connect(db_path)
-con.row_factory = sqlite3.Row
-routes = con.execute('SELECT * FROM routes')
+db_conn = create_db_conn()
+query = 'SELECT * FROM routes WHERE active=1 ORDER BY hits DESC, last_access DESC'
+routes = db_conn.execute(query)
 
 for route in routes:
     name = route['name']

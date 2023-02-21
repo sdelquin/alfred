@@ -42,6 +42,7 @@ class Workflow:
             return default
 
     def get_arg(self, arg_index: int, *, cast=str, default=''):
+        '''Get arg from command line: First arg is index 1'''
         try:
             return cast(sys.argv[arg_index])
         except Exception:
