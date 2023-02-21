@@ -1,12 +1,13 @@
 import re
+import sqlite3
 import sys
 import unicodedata
-from csv import DictReader
 from pathlib import Path
 
 from workflow import Workflow
 
 BOUNDARY_SYMBOLS = r'[- ():]+'
+CWD = Path(__file__).parent
 
 
 def match(query_parts, name):
@@ -21,16 +22,18 @@ def match(query_parts, name):
 query = unicodedata.normalize('NFC', sys.argv[1]).strip().lower()
 query_parts = re.split(BOUNDARY_SYMBOLS, query)
 
-wf = Workflow(icons_path=Path(__file__).parent / 'img')
-f = Path(__file__).parent / 'routes.csv'
+wf = Workflow(icons_path=CWD / 'img')
+db_path = CWD / 'go.sqlite'
 
-with open(f) as csvfile:
-    routes = DictReader(csvfile)
-    for route in routes:
-        name = route['name']
-        if not query or match(query_parts, name):
-            url = route['url']
-            icon = route.get('icon', '')
-            wf.newline(title=name, autocomplete=name, subtitle=url, arg=url, icon=icon)
+con = sqlite3.connect(db_path)
+con.row_factory = sqlite3.Row
+routes = con.execute('SELECT * FROM routes')
+
+for route in routes:
+    name = route['name']
+    if not query or match(query_parts, name):
+        url = route['url']
+        icon = route['icon'] or ''
+        wf.newline(title=name, autocomplete=name, subtitle=url, arg=url, icon=icon)
 
 wf.send()

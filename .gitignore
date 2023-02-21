@@ -4,5 +4,6 @@
 .env
 .media
 *.log
-gogogo/routes.csv
-gogogo/img
+go/routes.csv
+go/go.sqlite
+go/img
