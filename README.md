@@ -26,6 +26,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [pdfmerge](#pdfmerge)
 - [pdfsplit](#pdfsplit)
 - [svg2png](#svg2png)
+- [leroymerlin](#leroymerlin)
 
 ## andor
 
@@ -153,3 +154,9 @@ Split PDF file into several parts.
 Convert SVG files into PNG files.
 
 [Take a look of this workflow!](svg2png)
+
+## leroymerlin
+
+Locate special products at Leroy Merlin.
+
+[Take a look of this workflow!](leroymerlin)
