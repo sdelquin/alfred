@@ -17,7 +17,8 @@ def display(prices: dict):
     wf = Workflow(icons_path=Path(__file__).absolute().parent / 'img')
     for label, amount in prices.items():
         icon = f'{slugify(label)}.png'
-        wf.newline(title=f'{amount:.2f}€', subtitle=label, arg=amount, icon=icon)
+        price = f'{amount:.2f}€'
+        wf.newline(title=price, subtitle=label, arg=price, icon=icon)
     wf.send()
 
 
