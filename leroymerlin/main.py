@@ -1,3 +1,6 @@
+import shlex
+import subprocess
+
 from workflow import Workflow
 
 from .config import PRODUCTS
@@ -16,4 +19,5 @@ match step:
         wf.send()
     case 2:
         url = product_cfg['url'].format(size=size)
-        print(url)
+        cmd = f'open {url}'
+        subprocess.run(shlex.split(cmd))
