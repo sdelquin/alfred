@@ -4,7 +4,7 @@ selenium==3.141.0
 pyperclip==1.8.2
 findersel==0.1.4
 pylovepdf==1.3.2
-wrpy==0.1.0
+wrpy==0.1.1
 pillow==9.4.0
 pypdf2==3.0.1
 svglib==1.5.1
