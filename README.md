@@ -28,6 +28,7 @@ Custom [workflows](https://www.alfredapp.com/workflows/) for [Alfred](https://ww
 - [svg2png](#svg2png)
 - [leroymerlin](#leroymerlin)
 - [marte](#marte)
+- [peqes](#peqes)
 
 ## andor
 
@@ -167,3 +168,9 @@ Locate special products at Leroy Merlin.
 Open marte website.
 
 [Take a look of this workflow!](marte)
+
+## peqes
+
+Shorten url from clipboard using peq.es API. Resulting url is also copied to the clipboard.
+
+[Take a look of this workflow!](peqes)
